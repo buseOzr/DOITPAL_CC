@@ -1,14 +1,15 @@
  html,body{
-background-image: url('http://getwallpapers.com/wallpaper/full/0/a/0/362702.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
 font-family: 'Numans', sans-serif;
+    margin-bottom: 100px;
 }
 
 .container{
 height: 100%;
 align-content: center;
+  margin-bottom: 100px;
 }
 
 .card{
