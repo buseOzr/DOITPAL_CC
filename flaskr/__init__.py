@@ -1,6 +1,7 @@
 import os
 
 from flask import Flask, render_template
+from flask_bootstrap import Bootstrap
 
 
 def create_app(test_config=None):
@@ -10,6 +11,7 @@ def create_app(test_config=None):
         SECRET_KEY='dev',
         DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite'),
     )
+    bootstrap = Bootstrap(app)
 
     if test_config is None:
         # load the instance config, if it exists, when not testing
@@ -28,6 +30,6 @@ def create_app(test_config=None):
     @app.route('/')
     def index():
         user = {'username': 'Miguel'}
-        return render_template('index.html', title='Buse')
+        return render_template('index_base.html')
 
     return app
